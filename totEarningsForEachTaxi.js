@@ -1,10 +1,10 @@
 
 // What are the total earnings for each taxi?
 
-module.exports = function(capeTownTaxis) {
+module.exports = function(Taxis) {
 var vehicleDetails = {};
 
-capeTownTaxis.forEach(function(taxis){
+Taxis.forEach(function(taxis){
   var carReg = taxis.RegistrationNumber;
   var totalEarnings = Number(taxis.Trips * taxis.Fare) ;
 

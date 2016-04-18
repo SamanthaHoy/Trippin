@@ -1,10 +1,10 @@
 // What records do we have for CA 123 456?
 
-module.exports = function (capeTownTaxis) {
+module.exports = function (Taxis,carReg) {
   var specCarReg = [];
 
-  capeTownTaxis.forEach(function(taxi) {
-    if (taxi.RegistrationNumber === "CA 123 456") {
+  Taxis.forEach(function(taxi) {
+    if (taxi.RegistrationNumber === carReg) {
       specCarReg.push({
         "RegistrationNumber": taxi.RegistrationNumber ,
         "Route": taxi.Route ,

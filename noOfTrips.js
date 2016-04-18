@@ -1,8 +1,8 @@
 
-module.exports = function(capeTownTaxis) {
+module.exports = function(Taxis) {
 // exports.howManyTrips = function
 var totalTrips = 0;
-capeTownTaxis.forEach(function (taxi) {
+Taxis.forEach(function (taxi) {
   totalTrips += taxi.Trips ;
 }) ;
 

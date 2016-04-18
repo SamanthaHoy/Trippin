@@ -42,19 +42,19 @@ var capeTownTaxis = [
 ];
 
 describe("Cape Town taxi's", function () {
-
+// How many trips did all the taxis make?
       it("should return the no of trips all the taxis made", function(){
           var result = noOfTrips(capeTownTaxis);
           assert.equal(result,54)
       });
-
+// What’s the lowest number of trips that any taxi in Cape Town made?
       it("should return the lowest no of Trips of all the taxi trips", function(){
           var result = lowestNoOfTrips(capeTownTaxis);
           assert.equal(result,9);
       });
-
+// What records do we have for CA 123 456?
       it("should return the records which have register# CA 123 456", function() {
-          var result = recordsPerReg(capeTownTaxis);
+          var result = recordsPerReg(capeTownTaxis,"CA 123 456");
           result2 = [
             {
               "RegistrationNumber": "CA 123 456",
@@ -70,7 +70,7 @@ describe("Cape Town taxi's", function () {
             }] ;
           assert.deepEqual(result,result2);
       });
-
+// How many trips did CA 234 567 make?
       it("should return the no of Trips for CA 234 567",function(){
         var carReg = "CA 234 567";
         var result = howManyTrips(capeTownTaxis,carReg);

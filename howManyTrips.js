@@ -1,11 +1,11 @@
 // How many trips did CA 234 567 make
 
-module.exports = function (capeTownTaxi,carRegis) {
+module.exports = function (Taxi,carRegis) {
   var value = 0;
 
-  capeTownTaxi.forEach(function(taxi) {
+  Taxi.forEach(function(taxi) {
     if (taxi.RegistrationNumber === carRegis) {
-            value = taxi.Trips ;
+            value += taxi.Trips ;
         }
   })
   console.log("Trips : " + value);
