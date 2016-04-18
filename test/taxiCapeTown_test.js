@@ -93,11 +93,10 @@ describe("Cape Town taxi's", function () {
       })
 
 // What are the total earnings for each taxi?
-      it("should return the total earnings for all taxi's" , function() {
-        var result = totalEarningsForAllTaxis(capeTownTaxis);
-        assert.deepEqual(result,[
-        {"Car reg": "CA 123 456","Total Earnings":249},
-        {"Car reg": "CA 234 567","Total Earnings":132},
-        {"Car reg": "CA 345 678","Total Earnings":234}])
+      it("should return the total earnings for each taxi" , function() {
+        var result = totalEarningsForEachTaxi(capeTownTaxis);
+        assert.deepEqual(result,{"CA 123 456":249,
+        "CA 234 567":132,
+        "CA 345 678":234})
       })
   });
